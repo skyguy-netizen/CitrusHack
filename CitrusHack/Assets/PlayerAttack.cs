@@ -4,18 +4,15 @@ using UnityEngine;
 
 public class attack : MonoBehaviour
 {
-    // Start is called before the first frame update
-    //public GameObject victim;
-    //private int health = victim.GetComponent("Health");
-    void Start(int damage)
+    private int damage = 1;
+    private OnButtonPress(GameObject victim)
     {
-        //victim.GetComponent("Health") -= damage;
+        if (victim.GetComponent<Health>() != 0)
+        {
+            Health health = victim.GetComponent<Health>();
+            health.Damage(damage);
+        }
     }
-    void Update()
-    {
-
-    }
-
     // // Update is called once per frame
 
 }
