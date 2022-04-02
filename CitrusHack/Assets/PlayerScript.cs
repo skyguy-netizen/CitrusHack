@@ -8,7 +8,7 @@ public class PlayerScript : MonoBehaviour
     public int energy = 3;
     
     public GameObject enemy;
-
+//wefdhwmjdhw,dhk,wd
 
 
 
