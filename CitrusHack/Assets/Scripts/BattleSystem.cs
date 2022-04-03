@@ -26,7 +26,7 @@ public class BattleSystem : MonoBehaviour
     {
         GameObject playerGO = Instantiate(playerPrefab);
         playerStatus = playerGO.GetComponent<playerStatus>();
-        GameObject enemyGo = Instantiate(enemyPrefab);
+        GameObject enemyGO = Instantiate(enemyPrefab);
         enemyStatus = enemyGO.GetComponent<enemyStatus>();
 
         dialogueText.text = enemyStatus.unitName;
