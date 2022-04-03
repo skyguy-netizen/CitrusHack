@@ -14,6 +14,15 @@ public class Player : MonoBehaviour
 
     public void takeDamage(int damage)
     {
+        if (damage == 2)
+        {
+            enemy.GetComponent<Player>().energy -= 2;
+        }
+        else
+            if(damage == 4)
+            {
+            enemy.GetComponent<Player>().energy -= 5;
+            }
         health -= damage;
         if (health <= 0)
             print("gake over");
@@ -27,14 +36,15 @@ public class Player : MonoBehaviour
 
         if (attackNum == 2)
         {
-            energy -= 2;
+            print("test");
+            gameObject.GetComponent<Player>().energy -= 2;
             enemy.GetComponent<Player>().health -= 2;
             return;
         }
 
         else if (attackNum == 4)
         {
-            energy -= 5;
+            gameObject.GetComponent<Player>().energy -= 5;
             enemy.GetComponent<Player>().health -= 4;
             return;
         }
