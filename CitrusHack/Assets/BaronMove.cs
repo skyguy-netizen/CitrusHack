@@ -22,14 +22,14 @@ public class BaronMove : MonoBehaviour
         { 
             int[] values = new int[]{1, 2, 4};
             int randomNumber = 0;
-            if (gameObject.GetComponent<Player>().energy < 2)
+            if (gameObject.GetComponent<Player>().energy <= 1)
                 randomNumber = Random.Range(0, 1);
             else
-                if (gameObject.GetComponent<Player>().energy < 3)
+                if (gameObject.GetComponent<Player>().energy <= 4)
                 randomNumber = Random.Range(0, 2);
             else
-                    if (gameObject.GetComponent<Player>().energy < 5)
-                        randomNumber = Random.Range(0, 3);
+                    if (gameObject.GetComponent<Player>().energy == 5)
+                        randomNumber = Random.Range(2, 3);
             enemy.GetComponent<Player>().takeDamage(values[randomNumber]);
         }
     }

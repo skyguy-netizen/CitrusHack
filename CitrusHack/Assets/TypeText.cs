@@ -9,11 +9,12 @@ public class TypeText : MonoBehaviour
     public GameObject ButtonList;
     public GameObject enemy;
 
+    private bool ran = false;
+
     void Update() {
         if (Input.GetKeyDown("space")) {
             if (text1.text == "Baron is thinking about his next move...")
             {
-                text1.text = "";
                 enemy.GetComponent<BaronMove>().MakeMove();
             }
 

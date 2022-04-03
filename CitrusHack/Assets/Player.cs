@@ -35,19 +35,32 @@ public class Player : MonoBehaviour
                 dialogue.gameObject.SetActive(true);
                 dialogue.text = "Ty used axe slingin'! It did 2+ damage";
             }
+            else
+            {
+                dialogue.gameObject.SetActive(true);
+                dialogue.text = "Baron used hammer time! -2 health";
+            }
             enemy.GetComponent<Player>().energy -= 2;
         }
         else
             if (damage == 4)
         {
-            enemy.GetComponent<Player>().energy -= 5;
+            if (gameObject.name == "Tai")
+            {
+                animator.Play("UpdatedBaronSmash", 0, 0f);
+                enemy.GetComponent<Player>().energy -= 5;
+            }
         }
         else
         {
             if (gameObject.name == "Baron Von Baron")
             {
                 dialogue.gameObject.SetActive(true);
-                dialogue.text = "Ty used swing n' slice!";
+                dialogue.text = "Ty used swing n' slice! +1 damage";
+            }
+            else {
+                dialogue.gameObject.SetActive(true);
+                dialogue.text = "Baron used anvils! -1 health";
             }
         }
         health -= damage;
