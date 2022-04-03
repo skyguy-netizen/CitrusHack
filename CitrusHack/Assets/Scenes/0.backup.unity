@@ -3770,7 +3770,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 9
   m_Sprite: {fileID: 209055514506205857, guid: 62bc6c316525388458050caac2460d12, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9622642, g: 0.9032574, b: 0.9032574, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3880,6 +3880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dc7660d584dc9c4885530466ffc0e90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy: {fileID: 1702329977}
 --- !u!95 &1719157875
 Animator:
   serializedVersion: 3

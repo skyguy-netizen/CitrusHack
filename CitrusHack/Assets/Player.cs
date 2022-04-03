@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Threading;
 
 public class Player : MonoBehaviour
 {
@@ -12,8 +13,12 @@ public class Player : MonoBehaviour
     public GameObject megaSpecial;
     public GameObject enemy;
 
+    public Animator animator;
+
     public void takeDamage(int damage)
     {
+        animator.Play("BaronAnimation", 0, 0.0f);
+        ManageMove.playerTurn = !ManageMove.playerTurn;
         if (damage == 2)
         {
             enemy.GetComponent<Player>().energy -= 2;
@@ -25,35 +30,12 @@ public class Player : MonoBehaviour
             }
         health -= damage;
         if (health <= 0)
-            print("gake over");
+            print("game over");
     }
 
-    public void attack(int attackNum)
-    {
-        //Swing n' Slice (1 dmg, 0 energy)
-        //Axe-slingin (2 dmg, 2 energy)
-        //Axe-nado (4 dmg, 5 energy)
-
-        if (attackNum == 2)
-        {
-            print("test");
-            gameObject.GetComponent<Player>().energy -= 2;
-            enemy.GetComponent<Player>().health -= 2;
-            return;
-        }
-
-        else if (attackNum == 4)
-        {
-            gameObject.GetComponent<Player>().energy -= 5;
-            enemy.GetComponent<Player>().health -= 4;
-            return;
-        }
-        else
-        {
-            enemy.GetComponent<Player>().health -= 1;
-            return;
-        }
-
+    public void heal() {
+        health += 1;
+        ManageMove.playerTurn = !ManageMove.playerTurn;
     }
 
     public void Update()
