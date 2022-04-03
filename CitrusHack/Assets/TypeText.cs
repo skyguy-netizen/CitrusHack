@@ -17,7 +17,6 @@ public class TypeText : MonoBehaviour
             {
                 enemy.GetComponent<BaronMove>().MakeMove();
             }
-
             text1.text = "";
 
             ButtonList.SetActive(true);

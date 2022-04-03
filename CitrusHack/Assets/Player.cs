@@ -18,6 +18,9 @@ public class Player : MonoBehaviour
 
     public TMP_Text dialogue;
 
+    public GameObject LoserCanvas;
+    public GameObject WinnerCanvas;
+
     public void takeDamage(int damage)
     {
         if (gameObject.name == "Baron Von Baron")
@@ -47,7 +50,7 @@ public class Player : MonoBehaviour
         {
             if (gameObject.name == "Tai")
             {
-                animator.Play("UpdatedBaronSmash", 0, 0f);
+                animator.Play("BaronSmash", 0, 0f);
                 enemy.GetComponent<Player>().energy -= 5;
             }
         }
@@ -66,8 +69,12 @@ public class Player : MonoBehaviour
         health -= damage;
         if (enemy.GetComponent<Player>().energy < 5)
             enemy.GetComponent<Player>().energy += 1;
-        if (health <= 0)
-            print("game over");
+        if (health <= 0) {
+            if (gameObject.name == "Tai")
+                LoserCanvas.SetActive(true);
+            else
+                WinnerCanvas.SetActive(true);
+        }
     }
 
     public void heal() {
