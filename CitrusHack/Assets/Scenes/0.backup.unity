@@ -1383,6 +1383,18 @@ MonoBehaviour:
   - {fileID: 1580351999}
   - {fileID: 931384315}
   - {fileID: 1975594964}
+  playerHealthCapsules:
+  - {fileID: 300863573}
+  - {fileID: 796531082}
+  - {fileID: 688488889}
+  - {fileID: 1863130826}
+  - {fileID: 677752547}
+  enemyEnergyCapsules:
+  - {fileID: 2132713040}
+  - {fileID: 1232666719}
+  - {fileID: 85974374}
+  - {fileID: 1756290087}
+  - {fileID: 346210193}
   player: {fileID: 1702329977}
   enemy: {fileID: 1719157867}
 --- !u!1 &796531082
@@ -2982,6 +2994,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text1: {fileID: 1590166507}
   ButtonList: {fileID: 2062027409}
+  enemy: {fileID: 1719157867}
 --- !u!114 &1590166507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3615,6 +3628,7 @@ GameObject:
   - component: {fileID: 1702329979}
   - component: {fileID: 1702329978}
   - component: {fileID: 1702329980}
+  - component: {fileID: 1702329981}
   m_Layer: 0
   m_Name: Tai
   m_TagString: Untagged
@@ -3663,7 +3677,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_Sprite: {fileID: 8416243949045666254, guid: 86fc6eaa413854f729f0c8f7f92dc1a9, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9528302, g: 0.92136884, b: 0.92136884, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3699,13 +3713,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35b18334a680a7b44ae1c4b10f6bee57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 4
-  energy: 5
+  health: 5
+  energy: 0
   basic: {fileID: 1482042055}
   special: {fileID: 289190906}
   megaSpecial: {fileID: 1121956077}
   enemy: {fileID: 1719157867}
-  animator: {fileID: 0}
+  animator: {fileID: 1702329981}
+  dialogue: {fileID: 1590166507}
+--- !u!95 &1702329981
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702329977}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 817400d2f6413ad4ea2fe90e899d4b31, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1719157867
 GameObject:
   m_ObjectHideFlags: 0
@@ -3862,12 +3896,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
-  energy: 5
+  energy: 0
   basic: {fileID: 1482042055}
   special: {fileID: 289190906}
   megaSpecial: {fileID: 1121956077}
   enemy: {fileID: 1702329977}
   animator: {fileID: 1719157875}
+  dialogue: {fileID: 1590166507}
 --- !u!114 &1719157874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3881,6 +3916,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 1702329977}
+  dialogue: {fileID: 1590166507}
 --- !u!95 &1719157875
 Animator:
   serializedVersion: 3
