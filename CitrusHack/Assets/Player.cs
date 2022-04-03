@@ -14,7 +14,8 @@ public class Player : MonoBehaviour
     public GameObject megaSpecial;
     public GameObject enemy;
 
-    public Animator animator;
+    public Animator animator1;
+    public Animator animator2;
 
     public TMP_Text dialogue;
 
@@ -25,10 +26,10 @@ public class Player : MonoBehaviour
     {
         if (gameObject.name == "Baron Von Baron")
         {
-            animator.Play("BaronAnimation", 0, 0.0f);
+            animator2.Play("BaronAnimation", 0, 0.0f);
         }
         else
-            animator.Play("TyHurt", 0, 0.0f);
+            animator1.Play("TyHurt", 0, 0.0f);
 
         ManageMove.playerTurn = !ManageMove.playerTurn;
         if (damage == 2)
@@ -50,7 +51,7 @@ public class Player : MonoBehaviour
         {
             if (gameObject.name == "Tai")
             {
-                animator.Play("BaronSmash", 0, 0f);
+                animator2.SetBool("BaronBool", true);
                 enemy.GetComponent<Player>().energy -= 5;
             }
         }

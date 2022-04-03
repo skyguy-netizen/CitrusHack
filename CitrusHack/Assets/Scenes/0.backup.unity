@@ -4711,7 +4711,8 @@ MonoBehaviour:
   special: {fileID: 289190906}
   megaSpecial: {fileID: 1121956077}
   enemy: {fileID: 1719157867}
-  animator: {fileID: 1702329981}
+  animator1: {fileID: 1702329981}
+  animator2: {fileID: 1719157875}
   dialogue: {fileID: 1590166507}
   LoserCanvas: {fileID: 2058940742}
   WinnerCanvas: {fileID: 311786393}
@@ -4895,7 +4896,8 @@ MonoBehaviour:
   special: {fileID: 289190906}
   megaSpecial: {fileID: 1121956077}
   enemy: {fileID: 1702329977}
-  animator: {fileID: 1719157875}
+  animator1: {fileID: 1702329981}
+  animator2: {fileID: 1719157875}
   dialogue: {fileID: 1590166507}
   LoserCanvas: {fileID: 2058940742}
   WinnerCanvas: {fileID: 311786393}
