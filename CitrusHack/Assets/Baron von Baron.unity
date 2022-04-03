@@ -1377,8 +1377,8 @@ MonoBehaviour:
   - {fileID: 238529031}
   - {fileID: 977554852}
   - {fileID: 707306471}
-  player: {fileID: 0}
-  enemy: {fileID: 0}
+  player: {fileID: 1702329977}
+  enemy: {fileID: 1719157867}
 --- !u!1 &796531082
 GameObject:
   m_ObjectHideFlags: 0

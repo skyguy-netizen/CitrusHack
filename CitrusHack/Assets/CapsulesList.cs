@@ -4,16 +4,30 @@ using UnityEngine;
 
 public class CapsulesList : MonoBehaviour
 {
-    public GameObject[] capsules;
+    public GameObject[] enemyHealthCapsules;
+    public GameObject[] playerEnergyCapsules;
     public GameObject player;
     public GameObject enemy;
 
     void Update() {
         for (int i = 0; i < 5; i++) {
-            if (i < player.GetComponent<Player>().health)
-                capsules[i].SetActive(true);
+            if (i < enemy.GetComponent<Player>().health)
+            {
+                enemyHealthCapsules[i].SetActive(true);
+            }
             else
-                capsules[i].SetActive(false);
+            {
+                enemyHealthCapsules[i].SetActive(false);
+            }
+        }
+
+        for (int j = 0; j < 5; j++) {
+            if (j < player.GetComponent<Player>().energy)
+            {
+                playerEnergyCapsules[j].SetActive(true);
+            }
+            else
+                playerEnergyCapsules[j].SetActive(false);
         }
     }
 }
