@@ -13,7 +13,7 @@ public class TypeText : MonoBehaviour
 
     void Update() {
         if (Input.GetKeyDown("space")) {
-            if (text1.text == "Baron is thinking about his next move...")
+            if (text1.text == "Baron is thinking about his next move... \n 'Free Sample!'")
             {
                 enemy.GetComponent<BaronMove>().MakeMove();
             }

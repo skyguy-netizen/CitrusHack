@@ -11,7 +11,7 @@ public class BaronMove : MonoBehaviour
     void Update()
     {
         if (!ManageMove.playerTurn && dialogue.text == "") {
-            dialogue.text = "Baron is thinking about his next move...";
+            dialogue.text = "Baron is thinking about his next move... \n 'Free Sample!'";
         }
     }
 
