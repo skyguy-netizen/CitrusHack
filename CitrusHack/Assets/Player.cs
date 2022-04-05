@@ -49,7 +49,7 @@ public class Player : MonoBehaviour
         else
             if (damage == 4)
         {
-            if (gameObject.name == "Tai")
+            if (gameObject.name == "Ty")
             {
                 animator2.SetBool("BaronBool", true);
                 enemy.GetComponent<Player>().energy -= 5;
